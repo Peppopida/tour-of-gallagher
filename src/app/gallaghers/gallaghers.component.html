@@ -1,9 +1,18 @@
 <h2>Gallaghers list</h2>
-<ul class="gallagher">
+<ul class="gallaghers">
   <li *ngFor="let gallagher of gallaghers">
-    <button type="button">
+    <button [class.selected]="gallagher=== selectedGallagher" type="button" (click)="onSelect(gallagher)">
       <span class="badge">{{gallagher.id}}</span>
       <span class="name">{{gallagher.name}}</span>
     </button>
   </li>
 </ul>
+
+<div *ngIf="selectedGallagher">
+  <h2>{{selectedGallagher.name | uppercase}} Details</h2>
+  <div>id: {{selectedGallagher.id}}</div>
+  <div>
+    <label for="gallagher-name">Gallagher name: </label>
+    <input id="gallagher-name" [(ngModel)]="selectedGallagher.name" placeholder="name">
+  </div>
+</div>
