@@ -1,0 +1,9 @@
+<h2>Gallaghers list</h2>
+<ul class="gallagher">
+  <li *ngFor="let gallagher of gallaghers">
+    <button type="button">
+      <span class="badge">{{gallagher.id}}</span>
+      <span class="name">{{gallagher.name}}</span>
+    </button>
+  </li>
+</ul>
