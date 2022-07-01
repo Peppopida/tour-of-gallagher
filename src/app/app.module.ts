@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { GallaghersComponent } from './gallaghers/gallaghers.component';
 import { FormsModule } from '@angular/forms';
 import { GallagherDetailComponent } from './gallagher-detail/gallagher-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GallaghersComponent,
-    GallagherDetailComponent
+    GallagherDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
