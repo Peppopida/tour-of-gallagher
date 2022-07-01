@@ -21,11 +21,6 @@ export class GallaghersComponent implements OnInit {
     this.getGallaghers();
   }
 
-  onSelect(gallagher: Gallagher): void {
-    this.selectedGallagher = gallagher;
-    this.messageService.add(`GallaghersComponent: Selected gallagher id=${gallagher.id}`);
-  }
-
   getGallaghers(): void {
     this.gallagherService.getGallaghers()
         .subscribe(gallaghers => this.gallaghers = gallaghers);

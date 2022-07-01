@@ -1,0 +1,8 @@
+<h2>Top Gallaghers</h2>
+<div class="gallaghers-menu">
+  <a 
+    *ngFor="let gallagher of gallaghers"
+    routerLink="/detail/{{ gallagher.id }}">
+      {{ gallagher.name }}
+  </a>
+</div>

@@ -1,11 +1,10 @@
 <h2>Gallaghers list</h2>
 <ul class="gallaghers">
   <li *ngFor="let gallagher of gallaghers">
-    <button [class.selected]="gallagher=== selectedGallagher" type="button" (click)="onSelect(gallagher)">
-      <span class="badge">{{gallagher.id}}</span>
-      <span class="name">{{gallagher.name}}</span>
-    </button>
+    <a routerLink="/detail/{{gallagher.id}}">
+      <span class="badge">{{gallagher.id}}</span> {{gallagher.name}}
+    </a>
   </li>
 </ul>
 
-<app-gallagher-detail [gallagher]="selectedGallagher"></app-gallagher-detail>
+<app-gallagher-detail></app-gallagher-detail>

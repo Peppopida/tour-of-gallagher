@@ -7,13 +7,15 @@ import { GallaghersComponent } from './gallaghers/gallaghers.component';
 import { FormsModule } from '@angular/forms';
 import { GallagherDetailComponent } from './gallagher-detail/gallagher-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GallaghersComponent,
     GallagherDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

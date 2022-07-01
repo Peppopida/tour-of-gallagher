@@ -17,4 +17,10 @@ export class GallagherService {
     this.messageService.add('GallagherService: fetched gallaghers');
     return gallaghers;
   }
+
+  getGallagher(id: number): Observable<Gallagher> {
+    const gallagher = GALLAGHERS.find(h => h.id === id)!;
+    this.messageService.add(`GallagherService: fetched gallagher id=${id}`);
+    return of(gallagher);
+  }
 }
